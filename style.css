@@ -51,7 +51,7 @@ h1 {
     top: 50%;
     transform: translate(-50%, -50%);
     line-height: 2.6em;
-    border: 5px solid white;
+    /* border: 5px solid white; */
 }
 
 /* em */
@@ -75,7 +75,7 @@ h1 {
     top: 0;
     left: 0;
     position: absolute;
-    background-color: rgb(242, 242, 242);
+    background-color: white;
 }
 .one {
     max-width: 100%;
@@ -84,8 +84,10 @@ h1 {
     top: 0;
     left: 0;
     position: absolute;
-    background-color: rgb(199, 201, 214, 1);
-    color: white;
+    background: url('/images-portfolio/Personal\ Profile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
 
     font-size: 3vw;
     align-items: center;
@@ -121,6 +123,9 @@ h1 {
     left: 0;
     position: absolute;
     z-index: 3;
+    background: url('/images-music/dolo-iglesias-z9z6u1rn7sY-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: rgb(114, 109, 109);
     color: white;
 
