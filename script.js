@@ -161,6 +161,7 @@ myCity.addEventListener('mouseover', function(event) {
         // target background
         bgMain.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         bgOne.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+        bgOne.style.backgroundImage = 'none';
     // reset
     myCity.addEventListener('mouseout', function() {
         event.target.style.background = '';
@@ -178,6 +179,7 @@ myCity.addEventListener('mouseover', function(event) {
         // reset background
         bgMain.style.backgroundColor = '';
         bgOne.style.backgroundColor = '';
+        bgOne.style.backgroundImage = '';
     });
 });
 // MUSIC
@@ -198,6 +200,7 @@ myMusic.addEventListener('mouseover', function(event) {
         // target background
         bgMain.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         bgOne.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+        bgOne.style.backgroundImage = 'none';
         bgTwo.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         bgTwo.style.backgroundImage = 'none';
     // reset
@@ -217,6 +220,7 @@ myMusic.addEventListener('mouseover', function(event) {
         // reset background
         bgMain.style.backgroundColor = '';
         bgOne.style.backgroundColor = '';
+        bgOne.style.backgroundImage = '';
         bgTwo.style.backgroundColor = '';
         bgTwo.style.backgroundImage = '';
     });
