@@ -1,0 +1,173 @@
+/* DEFAULTS */
+html, * {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    height: auto
+}
+
+
+section {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+
+
+/* FONTS */
+@font-face {
+    font-family: 'mordenregular', 'dorielregular', 'a_black_livesblacklives', 'porterbold_demo';
+    
+    src: 
+    url('morden-webfont.woff2') format('woff2'),        url('morden-webfont.woff') format('woff'),
+    url('doriel-webfont.woff2') format('woff2'),        url('doriel-webfont.woff') format('woff'),
+    url('ablacklives-webfont.woff2') format('woff2'),   url('ablacklives-webfont.woff') format('woff'),
+    url('porter_bold-webfont.woff2') format('woff2'),   url('porter_bold-webfont.woff') format('woff');
+    
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+/* SCENE 0 */
+h1 {
+    min-width: 75vw;
+    min-height: 50vh;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 2.6em;
+    border: 5px solid white;
+}
+
+/* em */
+.boldText {
+    font-family: ,sans-serif;
+    font-size: 5.2vw;
+    font-weight: bold;
+} 
+
+
+.regText {
+    font-family: 'Unna','Jomolhari','Jacques Francois','Oxygen Mono','Oranienbaum','Cambay','Gilda Display','Baskervville','Suranna','Bodoni Moda','Noto Serif Display','Sawarabi Mincho','Old Standard TT','Prata','Amiri','Nanum Myeongjo','B612 Mono', sans-serif;
+    font-size: 5.2vw;
+    font-weight: lighter;
+    color:rgb(56, 56, 60);
+}
+
+/* PAGES */
+.main {
+    z-index: 6;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgb(242, 242, 242);
+}
+.one {
+    max-width: 100%;
+    min-height: 100vh;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgb(199, 201, 214, 1);
+    color: white;
+
+    font-size: 3vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#pImgContainer {
+    max-width: 100%;
+    min-height: 100vh;
+}
+#profileImg {
+    max-width: 100%;
+    height: auto;
+}
+.two {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 4;
+    background: url('/images-dallas/gabriel-tovar-sdeV8lqOyjs-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(87, 106, 122, 1);
+    color: white;
+
+    font-size: 3vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.three {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 3;
+    background-color: rgb(114, 109, 109);
+    color: white;
+
+    font-size: 3vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.four {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    background-color: black;
+    color: white;
+
+    font-size: 3vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.five {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: darkslategrey;
+    color: white;
+
+    font-size: 3vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.scene0 {
+    min-width: 100vw;
+    height: auto;
+}
+
+/* SCENE 1 */
+.scene1 {
+    min-width: 100vw;
+    height: auto;
+    z-index: 6;
+}
+.aboutMe {
+    max-width: 100%;
+    height: auto;
+    background-color: bisque;
+}
