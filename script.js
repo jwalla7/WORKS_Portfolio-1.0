@@ -107,7 +107,7 @@ const bgFive = document.getElementById('five');
 // JAMAL
 myName.addEventListener('mouseover', function(event) {
     // target text
-    event.target.style.background = 'aqua';
+    event.target.style.background = 'honeydew';
         rt1.style.visibility = 'hidden';
         rt2.style.visibility = 'hidden';
         rt3.style.visibility = 'hidden';
@@ -120,7 +120,8 @@ myName.addEventListener('mouseover', function(event) {
         myMusic.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
     // target background
-    bgMain.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+        bgMain.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+        bgOne.style.backgroundImage = '';
 
     // reset
     myName.addEventListener('mouseout', function() {
@@ -138,6 +139,8 @@ myName.addEventListener('mouseover', function(event) {
         myFit.style.visibility = '';
         // reset background
         bgMain.style.backgroundColor = '';
+        bgOne.style.backgroundColor = '';
+        bgOne.style.backgroundImage = 'none';
     });
 });
 // DALLAS
@@ -180,7 +183,7 @@ myCity.addEventListener('mouseover', function(event) {
 // MUSIC
 myMusic.addEventListener('mouseover', function(event) {
     // target
-    event.target.style.background = 'red';
+    event.target.style.background = 'purple';
         rt1.style.visibility = 'hidden';
         rt2.style.visibility = 'hidden';
         rt3.style.visibility = 'hidden';
