@@ -74,21 +74,30 @@ document.getElementById('boldGreeting').innerHTML = `${greeting()}`;
 const linkC = document.getElementById('linkContainer');
 const linkW = document.getElementById('linkWrapper');
 const logoC = document.getElementById('logoContainer');
+// logo
+const mySig = document.getElementById('sig');
 
 
 logoC.addEventListener('mouseover', (evt) => {
     // target logo
+    mySig.style.background = 'white';
+    mySig.style.filter = 'invert(100%)';
     linkW.style.visibility = 'visible';
     // 1. reload (replay) animation
     linkC.style.animationPlayState = '';
+    mySig.style.animationPlayState = '';
     // 2. remove
     linkC.style.animation = 'none';
+    mySig.style.animation = 'none';
     // 3. trigger reflow
     linkC.offsetWidth;
+    mySig.offsetWidth;
     // 4. add
-    linkC.style.animation = 'slide-in-bottom 1s ease-in-out';
+    linkC.style.animation = 'slide-in-bottom .5s ease-in-out';
+    mySig.style.animation = 'fade-in 1s ease-in-out';
     // target link
     linkC.style.visibility = 'visible';
+    mySig.style.visibility = 'visible';
     // reset logo
     linkW.addEventListener('mouseleave', () => {
         linkC.style.visibility = '';
@@ -97,13 +106,18 @@ logoC.addEventListener('mouseover', (evt) => {
     });
     logoC.addEventListener('mouseleave', () => {
         linkC.style.visibility = '';
+        mySig.style.background = '';
+        mySig.style.filter = '';
         linkC.style.animation = 'paused';
         // 1. reload (replay) animation
         linkC.style.animationPlayState = '';
+        mySig.style.animationPlayState = '';
         // 2. remove
         linkC.style.animation = 'none';
+        mySig.style.filter.animation = 'fade-out 1.5s ease-in-out';
         // 3. trigger reflow
         linkC.offsetWidth;
+        mySig.offsetWidth;
     })
 });
 
@@ -115,9 +129,7 @@ logoC.addEventListener('mouseover', (evt) => {
 
 // MOUSE EVENTS
 // nav
-const nv = document.getElementById('linkContainer')
-// logo
-const mySig = document.getElementById('sig');
+const nv = document.getElementById('linkContainer');
 // bold text
 const myName = document.getElementById('boldName');
 const myCity = document.getElementById('boldCity');
@@ -163,7 +175,7 @@ myName.addEventListener('mouseover', function(event) {
         rt6.style.visibility = 'hidden';
         rt7.style.visibility = 'hidden';
         rt8.style.visibility = 'hidden';
-        myCity.style.visibility = 'hidden';
+        myCity.style.display = 'none';
         myMusic.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
         // target background
@@ -190,7 +202,7 @@ myName.addEventListener('mouseover', function(event) {
         rt6.style.visibility = '';
         rt7.style.visibility = '';
         rt8.style.visibility = '';
-        myCity.style.visibility = '';
+        myCity.style.display = '';
         myMusic.style.visibility = '';
         myFit.style.visibility = '';
         // reset background
@@ -220,7 +232,7 @@ myCity.addEventListener('mouseover', function(event) {
         rt6.style.visibility = 'hidden';
         rt7.style.visibility = 'hidden';
         rt8.style.visibility = 'hidden';
-        myName.style.visibility = 'hidden';
+        myName.style.display = 'none';
         myMusic.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
         // target background
@@ -248,7 +260,7 @@ myCity.addEventListener('mouseover', function(event) {
         rt6.style.visibility = '';
         rt7.style.visibility = '';
         rt8.style.visibility = '';
-        myName.style.visibility = '';
+        myName.style.display = '';
         myMusic.style.visibility = '';
         myFit.style.visibility = '';
         // reset background
@@ -289,7 +301,17 @@ myMusic.addEventListener('mouseover', function(event) {
         bgTwo.style.backgroundImage = 'none';
         bgFour.style.backgroundColor = 'none';
         bgFour.style.backgroundImage = 'none';
+        // target video
         vThree.style.visibility = 'visible';
+            // 1. reload (replay) animation
+                vThree.style.animationPlayState = 'running';
+                vThree.currentTime = 0;
+                // 2. remove
+                vThree.style.animation = 'none';
+                // 3. trigger reflow
+                vThree.offsetWidth;
+                // 4. add
+                vThree.style.animation = 'fade-in 1s ease-in-out';
     // reset
     myMusic.addEventListener('mouseout', function() {
         // reset nav
@@ -322,11 +344,20 @@ myMusic.addEventListener('mouseover', function(event) {
         bgTwo.style.backgroundImage = '';
         bgFour.style.backgroundColor = '';
         bgFour.style.backgroundImage = '';
+        // reset video
         vThree.style.visibility = 'hidden';
+            // 1. reload (replay) animation
+            vThree.currentTime = 0;
+            vThree.style.animationPlayState = 'pause';
+            // 2. remove
+            vThree.style.animation = 'fade-out 1s ease-in-out';
+            // 3. trigger reflow
+            vThree.offsetWidth;
     });
 });
 // FITNESS
-myFit.addEventListener('mouseover', function(event) {
+
+const fitness = myFit.addEventListener('mouseover', function(event) {
         // target nav
         nv.style.visibility = 'hidden';
         // target cursor
