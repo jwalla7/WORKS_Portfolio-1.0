@@ -160,7 +160,7 @@ const vFour3 = document.getElementById('fourVid3');
 
 
 // JAMAL
-myName.addEventListener('mouseover', function(event) {
+const jamal = myName.addEventListener('mouseover', function(event) {
         // target nav
         nv.style.visibility = 'hidden';
         // target cursor
@@ -212,7 +212,7 @@ myName.addEventListener('mouseover', function(event) {
     });
 });
 // DALLAS
-myCity.addEventListener('mouseover', function(event) {
+const city = myCity.addEventListener('mouseover', function(event) {
         // target nav
         nv.style.visibility = 'hidden';
         // target cursor
@@ -270,7 +270,7 @@ myCity.addEventListener('mouseover', function(event) {
     });
 });
 // MUSIC
-myMusic.addEventListener('mouseover', function(event) {
+const music = myMusic.addEventListener('mouseover', function(event) {
         // target nav
         nv.style.visibility = 'hidden';
         // target cursor
@@ -466,3 +466,4 @@ const fitness = myFit.addEventListener('mouseover', function(event) {
             vFour3.offsetWidth;
     });
 });
+
