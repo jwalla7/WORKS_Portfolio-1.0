@@ -70,7 +70,42 @@ joyfulWords();
 document.getElementById('boldDay').innerHTML = `${dayList[day]}`;
 document.getElementById('boldGreeting').innerHTML = `${greeting()}`;
 
+// ON SCROLL NAV LINKS
+const linkC = document.getElementById('linkContainer');
+const linkW = document.getElementById('linkWrapper');
+const logoC = document.getElementById('logoContainer');
 
+
+logoC.addEventListener('mouseover', (evt) => {
+    // target logo
+    linkW.style.visibility = 'visible';
+    // 1. reload (replay) animation
+    linkC.style.animationPlayState = '';
+    // 2. remove
+    linkC.style.animation = 'none';
+    // 3. trigger reflow
+    linkC.offsetWidth;
+    // 4. add
+    linkC.style.animation = 'slide-in-bottom 1s ease-in-out';
+    // target link
+    linkC.style.visibility = 'visible';
+    // reset logo
+    linkW.addEventListener('mouseleave', () => {
+        linkC.style.visibility = '';
+        linkC.style.animation = 'paused';
+        linkW.style.visibility = 'hidden';
+    });
+    logoC.addEventListener('mouseleave', () => {
+        linkC.style.visibility = '';
+        linkC.style.animation = 'paused';
+        // 1. reload (replay) animation
+        linkC.style.animationPlayState = '';
+        // 2. remove
+        linkC.style.animation = 'none';
+        // 3. trigger reflow
+        linkC.offsetWidth;
+    })
+});
 
 
 
@@ -79,6 +114,10 @@ document.getElementById('boldGreeting').innerHTML = `${greeting()}`;
 
 
 // MOUSE EVENTS
+// nav
+const nv = document.getElementById('linkContainer')
+// logo
+const mySig = document.getElementById('sig');
 // bold text
 const myName = document.getElementById('boldName');
 const myCity = document.getElementById('boldCity');
@@ -100,14 +139,22 @@ const bgTwo = document.getElementById('two');
 const bgThree = document.getElementById('three');
 const bgFour = document.getElementById('four');
 const bgFive = document.getElementById('five');
-
+// video
+const vThree = document.getElementById('threeVid');
+const vFour1 = document.getElementById('fourVid1');
+const vFour2 = document.getElementById('fourVid2');
+const vFour3 = document.getElementById('fourVid3');
 
 
 
 // JAMAL
 myName.addEventListener('mouseover', function(event) {
-    // target text
-    event.target.style.background = 'honeydew';
+        // target nav
+        nv.style.visibility = 'hidden';
+        // target cursor
+        document.body.style.cursor = 'crosshair';
+        // target text
+        event.target.style.background = 'rgb(87, 106, 122, 1)';
         rt1.style.visibility = 'hidden';
         rt2.style.visibility = 'hidden';
         rt3.style.visibility = 'hidden';
@@ -119,12 +166,21 @@ myName.addEventListener('mouseover', function(event) {
         myCity.style.visibility = 'hidden';
         myMusic.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
-    // target background
+        // target background
         bgMain.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         bgOne.style.backgroundImage = '';
-
     // reset
     myName.addEventListener('mouseout', function() {
+        // reset nav
+        nv.style.visibility = 'visible';
+        // reset logo & links
+        mySig.style.visibility = '';
+        logoC.style.visibility = '';
+        linkC.style.visibility = '';
+        linkW.style.visibility = '';
+        // reset cursor
+        document.body.style.cursor = '';
+        // reset text
         event.target.style.background = '';
         rt1.style.visibility = '';
         rt2.style.visibility = '';
@@ -145,8 +201,17 @@ myName.addEventListener('mouseover', function(event) {
 });
 // DALLAS
 myCity.addEventListener('mouseover', function(event) {
-    // target
-    event.target.style.background = 'yellow';
+        // target nav
+        nv.style.visibility = 'hidden';
+        // target cursor
+        document.body.style.cursor = 'crosshair';
+        // target logo & links
+        logoC.style.visibility = 'hidden';
+        linkC.style.visibility = 'hidden';
+        linkW.style.visibility = 'hidden';
+        mySig.style.visibility = 'hidden';
+        // target text
+        event.target.style.background = 'yellow';
         rt1.style.visibility = 'hidden';
         rt2.style.visibility = 'hidden';
         rt3.style.visibility = 'hidden';
@@ -164,6 +229,16 @@ myCity.addEventListener('mouseover', function(event) {
         bgOne.style.backgroundImage = 'none';
     // reset
     myCity.addEventListener('mouseout', function() {
+        // reset nav
+        nv.style.visibility = '';
+        // reset cursor
+        document.body.style.cursor = '';
+        // reset logo & links
+        mySig.style.visibility = '';
+        logoC.style.visibility = '';
+        linkC.style.visibility = '';
+        linkW.style.visibility = '';
+        // reset text
         event.target.style.background = '';
         rt1.style.visibility = '';
         rt2.style.visibility = '';
@@ -184,8 +259,17 @@ myCity.addEventListener('mouseover', function(event) {
 });
 // MUSIC
 myMusic.addEventListener('mouseover', function(event) {
-    // target
-    event.target.style.background = 'purple';
+        // target nav
+        nv.style.visibility = 'hidden';
+        // target cursor
+        document.body.style.cursor = 'crosshair';
+        // target logo & links
+        logoC.style.visibility = 'hidden';
+        linkC.style.visibility = 'hidden';
+        linkW.style.visibility = 'hidden';
+        mySig.style.visibility = 'hidden';
+        // target text
+        event.target.style.background = 'beige';
         rt1.style.visibility = 'hidden';
         rt2.style.visibility = 'hidden';
         rt3.style.visibility = 'hidden';
@@ -203,9 +287,22 @@ myMusic.addEventListener('mouseover', function(event) {
         bgOne.style.backgroundImage = 'none';
         bgTwo.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         bgTwo.style.backgroundImage = 'none';
+        bgFour.style.backgroundColor = 'none';
+        bgFour.style.backgroundImage = 'none';
+        vThree.style.visibility = 'visible';
     // reset
     myMusic.addEventListener('mouseout', function() {
-    event.target.style.background = '';
+        // reset nav
+        nv.style.visibility = 'visible';
+        // reset cursor
+        document.body.style.cursor = '';
+        // resest logo & links
+        logoC.style.visibility = '';
+        linkC.style.visibility = '';
+        linkW.style.visibility = '';
+        mySig.style.visibility = '';
+        // reset text
+        event.target.style.background = '';
         rt1.style.visibility = '';
         rt2.style.visibility = '';
         rt3.style.visibility = '';
@@ -223,12 +320,25 @@ myMusic.addEventListener('mouseover', function(event) {
         bgOne.style.backgroundImage = '';
         bgTwo.style.backgroundColor = '';
         bgTwo.style.backgroundImage = '';
+        bgFour.style.backgroundColor = '';
+        bgFour.style.backgroundImage = '';
+        vThree.style.visibility = 'hidden';
     });
 });
 // FITNESS
 myFit.addEventListener('mouseover', function(event) {
-    // target
-    event.target.style.background = 'blue';
+        // target nav
+        nv.style.visibility = 'hidden';
+        // target cursor
+        document.body.style.cursor = 'crosshair';
+        // target logo & links
+        logoC.style.visibility = 'hidden';
+        linkC.style.visibility = 'hidden';
+        linkW.style.visibility = 'hidden';
+        mySig.style.visibility = 'hidden';
+        // target text
+        event.target.style.color = 'white';
+        event.target.style.background = 'black';
         rt1.style.visibility = 'hidden';
         rt2.style.visibility = 'hidden';
         rt3.style.visibility = 'hidden';
@@ -240,9 +350,51 @@ myFit.addEventListener('mouseover', function(event) {
         myName.style.visibility = 'hidden';
         myCity.style.visibility = 'hidden';
         myMusic.style.visibility = 'hidden';
+        // target background
+        bgMain.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+        bgOne.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+        bgOne.style.backgroundImage = 'none';
+        bgTwo.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+        bgTwo.style.backgroundImage = 'none';
+        bgThree.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+        bgThree.style.backgroundImage = 'none';
+        // target video
+        vFour1.style.visibility = 'visible';
+        vFour2.style.visibility = 'visible';
+        vFour3.style.visibility = 'visible';
+        // 1. reload (replay) animation
+            vFour1.style.animationPlayState = 'running';
+            vFour1.currentTime = 0;
+            vFour2.style.animationPlayState = 'running';
+            vFour2.currentTime = 0;
+            vFour3.style.animationPlayState = 'running';
+            vFour3.currentTime = 0;
+            // 2. remove
+            vFour1.style.animation = 'none';
+            vFour2.style.animation = 'none';
+            vFour3.style.animation = 'none';
+            // 3. trigger reflow
+            vFour1.offsetWidth;
+            vFour2.offsetWidth;
+            vFour3.offsetWidth;
+            // 4. add
+            vFour1.style.animation = 'fade-in 1s ease-in-out';
+            vFour2.style.animation = 'fade-in 1s ease-in-out';
+            vFour3.style.animation = 'fade-in 1s ease-in-out';
     // reset
     myFit.addEventListener('mouseout', function() {
-    event.target.style.background = '';
+        // reset nav
+        nv.style.visibility = 'visible';
+        // reset cursor
+        document.body.style.cursor = '';
+        // reset logo & links
+        logoC.style.visibility = '';
+        linkC.style.visibility = '';
+        linkW.style.visibility = '';
+        mySig.style.visibility = '';
+        // reset text
+        event.target.style.color = '';
+        event.target.style.background = '';
         rt1.style.visibility = '';
         rt2.style.visibility = '';
         rt3.style.visibility = '';
@@ -254,5 +406,32 @@ myFit.addEventListener('mouseover', function(event) {
         myName.style.visibility = '';
         myCity.style.visibility = '';
         myMusic.style.visibility = '';
+        // reset background
+        bgMain.style.backgroundColor = '';
+        bgOne.style.backgroundColor = '';
+        bgOne.style.backgroundImage = '';
+        bgTwo.style.backgroundColor = '';
+        bgTwo.style.backgroundImage = '';
+        bgThree.style.backgroundColor = '';
+        bgThree.style.backgroundImage = '';
+        // reset video
+        vFour1.style.visibility = 'hidden';
+        vFour2.style.visibility = 'hidden';
+        vFour3.style.visibility = 'hidden';
+            // 1. reload (replay) animation
+            vFour1.currentTime = 0;
+            vFour2.currentTime = 0;
+            vFour3.currentTime = 0;
+            vFour1.style.animationPlayState = 'pause';
+            vFour2.style.animationPlayState = 'pause';
+            vFour3.style.animationPlayState = 'pause';
+            // 2. remove
+            vFour1.style.animation = 'fade-out 1s ease-in-out';
+            vFour2.style.animation = 'fade-out 1s ease-in-out';
+            vFour3.style.animation = 'fade-out 1s ease-in-out';
+            // 3. trigger reflow
+            vFour1.offsetWidth;
+            vFour2.offsetWidth;
+            vFour3.offsetWidth;
     });
 });

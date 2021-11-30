@@ -1,36 +1,215 @@
+/* FONTS */
+@font-face {
+    font-family: 'negara_serifhairline_italic','darker_grotesquelight','mordenregular', 'dorielregular', 'a_black_livesblacklives', 'porterbold_demo';
+    
+    src: 
+    url('morden-webfont.woff2') format('woff2'), url('morden-webfont.woff') format('woff'),
+    url('doriel-webfont.woff2') format('woff2'), url('doriel-webfont.woff') format('woff'),
+    url('ablacklives-webfont.woff2') format('woff2'), url('ablacklives-webfont.woff') format('woff'),
+    url('porter_bold-webfont.woff2') format('woff2'), url('porter_bold-webfont.woff') format('woff'),
+    url('darkergrotesque-light-webfont.woff2') format('woff2'), url('darkergrotesque-light-webfont.woff') format('woff'),
+    url('negaraserif-hairlineitalic-webfont.woff2') format('woff2'), url('negaraserif-hairlineitalic-webfont.woff') format('woff');
+    
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* KEYFRAMES */
+@keyframes slide-in-left { 
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
 /* DEFAULTS */
 html, * {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     box-sizing: border-box;
-}
+}    
 
 body {
-    max-width: 100%;
+    min-width: 100vw;
     height: auto
-}
+}    
 
 
 section {
     min-width: 100vw;
     min-height: 100vh;
+}    
+
+
+
+
+
+
+
+
+
+/*
+::
+::::::::::::::::::::::::::::::::::::::::::::::::
+------------- (A) HEADER CONTAINER -------------
+::::::::::::::::::::::::::::::::::::::::::::::::
+::
+*/
+
+.header-Container {
+    /* Layout */
+    max-width: 100%;
+    min-height: 50vh;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    /* Position */
+    position: fixed;
+    /* Background */
+    /* background-color: red; */
+}    
+
+/*  ------ NAV CONTAINER ------ */
+#navContainer {
+    /* Layout */
+    width: 10vw;
+    height: 50vh;
+    /* Position */
+    position: fixed;
+    /* margin: 0 0 0 89.1vw; */
+    /* Background */
+    background-color: none;
+    /* Border */
+    border: 5px solid violet;
+}    
+/*  ------ Nav Logo Container ------ */
+#logoContainer{
+    /* Layout */
+    max-width: 50vw;
+    height: 13vh;
+    /* Position */
+    margin: .5% 0 0 0;
+    text-align: center;
+    /* Background */
+    background-color: none;
+    border: 5px solid orangered;
+    /* Border */
+    /* Font */
+    color: white;
+}    
+#sig {
+    max-width: 80%;
+}    
+
+/*  ------  Nav ------ */
+#linkContainer{
+    /* Layout */
+    min-width: 5vw;
+    height: 45vh;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    /* Position */
+    visibility: hidden;
+    Background: none;
+    /* background-color: tomato; */
+    /* Border */
+    border: 4px solid blue;
+    /* Animation */
+    animation: slide-in-bottom 1s ease-in-out;
+    /* Font */
+    font-family:;
+}    
+/*  ------  Nav LinkWrapper ------ */
+#linkWrapper {
+    width: 14.3vw;
+    height: 10vh;
+    margin: 13vh 10vw 0 -3vw;
+    column-gap: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+    background: none;
+    border: 4px solid black;
 }
+/*  ------  Nav Links ------ */
+#navBar_Link {
+    /* Layout */
+    /* Position */
+    /* Background */
+    background: none;
+    /* Border */
+    /* Font */
+    font-size: 120%;
+    text-decoration: none;
+    color: black;
+}    
 
 
 
-/* FONTS */
-@font-face {
-    font-family: 'mordenregular', 'dorielregular', 'a_black_livesblacklives', 'porterbold_demo';
-    
-    src: 
-    url('morden-webfont.woff2') format('woff2'),        url('morden-webfont.woff') format('woff'),
-    url('doriel-webfont.woff2') format('woff2'),        url('doriel-webfont.woff') format('woff'),
-    url('ablacklives-webfont.woff2') format('woff2'),   url('ablacklives-webfont.woff') format('woff'),
-    url('porter_bold-webfont.woff2') format('woff2'),   url('porter_bold-webfont.woff') format('woff');
-    
-    font-weight: normal;
-    font-style: normal;
-}
+
+
+
+
 
 
 
@@ -50,22 +229,24 @@ h1 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    line-height: 2.6em;
+    line-height: 2.8em;
     /* border: 5px solid white; */
 }
 
 /* em */
 .boldText {
-    font-family: ,sans-serif;
-    font-size: 5.2vw;
+    font-family: 'UnBatangRegular','negara_serifhairline_italic','UnGungseoRegular','GenomeThin', sans-serif;
+    font-size: 4.5vw;
     font-weight: bold;
 } 
 
 
 .regText {
-    font-family: 'Unna','Jomolhari','Jacques Francois','Oxygen Mono','Oranienbaum','Cambay','Gilda Display','Baskervville','Suranna','Bodoni Moda','Noto Serif Display','Sawarabi Mincho','Old Standard TT','Prata','Amiri','Nanum Myeongjo','B612 Mono', sans-serif;
-    font-size: 5.2vw;
+    font-family: 'HKGroteskLight','IsabellaSansRegular','GowaRegular','AlexanderRegular','Unna','Jomolhari','Jacques Francois','Oxygen Mono','Oranienbaum','Cambay','Gilda Display','Baskervville','Suranna','Bodoni Moda','Noto Serif Display','Sawarabi Mincho','Old Standard TT','Prata','Amiri','Nanum Myeongjo','B612 Mono', sans-serif;
+    font-size: 4.5vw;
     font-weight: lighter;
+    font-style: normal;
+    letter-spacing: -5px;
     color:rgb(56, 56, 60);
 }
 
@@ -78,15 +259,15 @@ h1 {
     background-color: white;
 }
 .one {
-    max-width: 100%;
+    min-width: 100vw;
     min-height: 100vh;
     z-index: 5;
     top: 0;
     left: 0;
     position: absolute;
-    background: url('/images-portfolio/Personal\ Profile.png');
+    /* background: url('/images-portfolio/Personal\ Profile.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     background-color: white;
 
     font-size: 3vw;
@@ -123,10 +304,10 @@ h1 {
     left: 0;
     position: absolute;
     z-index: 3;
-    background: url('/images-music/dolo-iglesias-z9z6u1rn7sY-unsplash.jpg');
+    /* background: url('/images-music/dolo-iglesias-z9z6u1rn7sY-unsplash.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgb(114, 109, 109);
+    background-size: cover; */
+    /* background-color: rgb(114, 109, 109); */
     color: white;
 
     font-size: 3vw;
@@ -134,18 +315,61 @@ h1 {
     justify-content: center;
     text-align: center;
 }
+#threeVid {
+    position: relative;
+    visibility: hidden;
+    /* top: 0;
+    left: 0; */
+    z-index: 3;
+    max-width: 100%; 
+    height: 100vh;
+}
 .four {
     top: 0;
     left: 0;
     position: absolute;
     z-index: 2;
+    /* background: url('images-fit/julian-hochgesang-jyoTLVMv9So-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
     background-color: black;
-    color: white;
+    color:black;
 
     font-size: 3vw;
     align-items: center;
     justify-content: center;
     text-align: center;
+    display: flex;
+}
+#fourVid1 {
+    display: flex;
+    position: relative;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    max-width: 100%; 
+    height: 100vh;
+}
+#fourVid2 {
+    display: flex;
+    position: relative;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    max-width: 100%;
+    height: 100vh;
+}
+#fourVid3 {
+    display: flex;
+    position: relative;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    max-width: 100%; 
+    height: 100vh;
 }
 .five {
     top: 0;
@@ -165,13 +389,22 @@ h1 {
     height: auto;
 }
 
+
+
+
+
+
+
+
+
 /* SCENE 1 */
 .scene1 {
+    margin: 60% 0 0 0;
     min-width: 100vw;
-    height: auto;
-    z-index: 6;
+    height: 100vh;
 }
 .aboutMe {
+    position: sticky;
     max-width: 100%;
     height: auto;
     background-color: bisque;
