@@ -1,4 +1,5 @@
 
+
 // DATE & GREETINGS
 let today = new Date();
 let day = today.getDay();
@@ -19,14 +20,6 @@ const greeting = () => {
         return timeOfDay = 'Good evening' 
     }
 }
-
-
-
-
-
-
-
-
 
 // JOYFUL WORDS
 const joyWords = ['beautiful', 'amazing', 'lovely', 'awesome', 'amazing', 'fantastic', 'incredible', 'marvelous', 'phenomenal', 'wondrous', 'tremendous','wonderful', 'magnificent', 'fine', 'cool', 'astonishing', 'new'];
@@ -70,40 +63,58 @@ joyfulWords();
 document.getElementById('boldDay').innerHTML = `${dayList[day]}`;
 document.getElementById('boldGreeting').innerHTML = `${greeting()}`;
 
+
+
+
+
 // ON SCROLL NAV LINKS
 const linkC = document.getElementById('linkContainer');
 const linkW = document.getElementById('linkWrapper');
 const logoC = document.getElementById('logoContainer');
+// logo
+const mySig = document.getElementById('sig');
 
-
+// LOGO
 logoC.addEventListener('mouseover', (evt) => {
     // target logo
+    mySig.style.background = 'white';
+    mySig.style.filter = 'invert(100%)';
     linkW.style.visibility = 'visible';
     // 1. reload (replay) animation
     linkC.style.animationPlayState = '';
+    mySig.style.animationPlayState = '';
     // 2. remove
     linkC.style.animation = 'none';
+    mySig.style.animation = 'none';
     // 3. trigger reflow
     linkC.offsetWidth;
+    mySig.offsetWidth;
     // 4. add
-    linkC.style.animation = 'slide-in-bottom 1s ease-in-out';
+    linkC.style.animation = 'slide-in-bottom .5s ease-in-out';
+    mySig.style.animation = 'fade-in .5s ease-in-out';
     // target link
     linkC.style.visibility = 'visible';
+    mySig.style.visibility = 'visible';
     // reset logo
     linkW.addEventListener('mouseleave', () => {
-        linkC.style.visibility = '';
+        linkC.style.visibility = 'hidden';
         linkC.style.animation = 'paused';
         linkW.style.visibility = 'hidden';
     });
     logoC.addEventListener('mouseleave', () => {
         linkC.style.visibility = '';
+        mySig.style.background = '';
+        mySig.style.filter = '';
         linkC.style.animation = 'paused';
         // 1. reload (replay) animation
         linkC.style.animationPlayState = '';
+        mySig.style.animationPlayState = '';
         // 2. remove
         linkC.style.animation = 'none';
+        mySig.style.filter.animation = 'fade-out 1.5s ease-in-out';
         // 3. trigger reflow
         linkC.offsetWidth;
+        mySig.offsetWidth;
     })
 });
 
@@ -112,12 +123,9 @@ logoC.addEventListener('mouseover', (evt) => {
 
 
 
-
 // MOUSE EVENTS
 // nav
-const nv = document.getElementById('linkContainer')
-// logo
-const mySig = document.getElementById('sig');
+const nv = document.getElementById('linkContainer');
 // bold text
 const myName = document.getElementById('boldName');
 const myCity = document.getElementById('boldCity');
@@ -148,11 +156,12 @@ const vFour3 = document.getElementById('fourVid3');
 
 
 // JAMAL
-myName.addEventListener('mouseover', function(event) {
+const jamal = myName.addEventListener('mouseover', function(event) {
         // target nav
         nv.style.visibility = 'hidden';
         // target cursor
         document.body.style.cursor = 'crosshair';
+        
         // target text
         event.target.style.background = 'rgb(87, 106, 122, 1)';
         rt1.style.visibility = 'hidden';
@@ -199,8 +208,9 @@ myName.addEventListener('mouseover', function(event) {
         bgOne.style.backgroundImage = 'none';
     });
 });
+
 // DALLAS
-myCity.addEventListener('mouseover', function(event) {
+const city = myCity.addEventListener('mouseover', function(event) {
         // target nav
         nv.style.visibility = 'hidden';
         // target cursor
@@ -258,7 +268,7 @@ myCity.addEventListener('mouseover', function(event) {
     });
 });
 // MUSIC
-myMusic.addEventListener('mouseover', function(event) {
+const music = myMusic.addEventListener('mouseover', function(event) {
         // target nav
         nv.style.visibility = 'hidden';
         // target cursor
@@ -289,7 +299,17 @@ myMusic.addEventListener('mouseover', function(event) {
         bgTwo.style.backgroundImage = 'none';
         bgFour.style.backgroundColor = 'none';
         bgFour.style.backgroundImage = 'none';
+        // target video
         vThree.style.visibility = 'visible';
+            // 1. reload (replay) animation
+                vThree.style.animationPlayState = 'running';
+                vThree.currentTime = 0;
+                // 2. remove
+                vThree.style.animation = 'none';
+                // 3. trigger reflow
+                vThree.offsetWidth;
+                // 4. add
+                vThree.style.animation = 'fade-in 1s ease-in-out';
     // reset
     myMusic.addEventListener('mouseout', function() {
         // reset nav
@@ -322,11 +342,20 @@ myMusic.addEventListener('mouseover', function(event) {
         bgTwo.style.backgroundImage = '';
         bgFour.style.backgroundColor = '';
         bgFour.style.backgroundImage = '';
+        // reset video
         vThree.style.visibility = 'hidden';
+            // 1. reload (replay) animation
+            vThree.currentTime = 0;
+            vThree.style.animationPlayState = 'pause';
+            // 2. remove
+            vThree.style.animation = 'fade-out 1s ease-in-out';
+            // 3. trigger reflow
+            vThree.offsetWidth;
     });
 });
 // FITNESS
-myFit.addEventListener('mouseover', function(event) {
+
+const fitness = myFit.addEventListener('mouseover', function(event) {
         // target nav
         nv.style.visibility = 'hidden';
         // target cursor
@@ -435,3 +464,4 @@ myFit.addEventListener('mouseover', function(event) {
             vFour3.offsetWidth;
     });
 });
+
