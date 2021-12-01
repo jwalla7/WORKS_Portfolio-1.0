@@ -1,4 +1,5 @@
 
+
 // DATE & GREETINGS
 let today = new Date();
 let day = today.getDay();
@@ -19,14 +20,6 @@ const greeting = () => {
         return timeOfDay = 'Good evening' 
     }
 }
-
-
-
-
-
-
-
-
 
 // JOYFUL WORDS
 const joyWords = ['beautiful', 'amazing', 'lovely', 'awesome', 'amazing', 'fantastic', 'incredible', 'marvelous', 'phenomenal', 'wondrous', 'tremendous','wonderful', 'magnificent', 'fine', 'cool', 'astonishing', 'new'];
@@ -70,6 +63,10 @@ joyfulWords();
 document.getElementById('boldDay').innerHTML = `${dayList[day]}`;
 document.getElementById('boldGreeting').innerHTML = `${greeting()}`;
 
+
+
+
+
 // ON SCROLL NAV LINKS
 const linkC = document.getElementById('linkContainer');
 const linkW = document.getElementById('linkWrapper');
@@ -77,7 +74,7 @@ const logoC = document.getElementById('logoContainer');
 // logo
 const mySig = document.getElementById('sig');
 
-
+// LOGO
 logoC.addEventListener('mouseover', (evt) => {
     // target logo
     mySig.style.background = 'white';
@@ -94,13 +91,13 @@ logoC.addEventListener('mouseover', (evt) => {
     mySig.offsetWidth;
     // 4. add
     linkC.style.animation = 'slide-in-bottom .5s ease-in-out';
-    mySig.style.animation = 'fade-in 1s ease-in-out';
+    mySig.style.animation = 'fade-in .5s ease-in-out';
     // target link
     linkC.style.visibility = 'visible';
     mySig.style.visibility = 'visible';
     // reset logo
     linkW.addEventListener('mouseleave', () => {
-        linkC.style.visibility = '';
+        linkC.style.visibility = 'hidden';
         linkC.style.animation = 'paused';
         linkW.style.visibility = 'hidden';
     });
@@ -120,7 +117,6 @@ logoC.addEventListener('mouseover', (evt) => {
         mySig.offsetWidth;
     })
 });
-
 
 
 
@@ -165,6 +161,7 @@ const jamal = myName.addEventListener('mouseover', function(event) {
         nv.style.visibility = 'hidden';
         // target cursor
         document.body.style.cursor = 'crosshair';
+        
         // target text
         event.target.style.background = 'rgb(87, 106, 122, 1)';
         rt1.style.visibility = 'hidden';
@@ -175,7 +172,7 @@ const jamal = myName.addEventListener('mouseover', function(event) {
         rt6.style.visibility = 'hidden';
         rt7.style.visibility = 'hidden';
         rt8.style.visibility = 'hidden';
-        myCity.style.display = 'none';
+        myCity.style.visibility = 'hidden';
         myMusic.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
         // target background
@@ -202,7 +199,7 @@ const jamal = myName.addEventListener('mouseover', function(event) {
         rt6.style.visibility = '';
         rt7.style.visibility = '';
         rt8.style.visibility = '';
-        myCity.style.display = '';
+        myCity.style.visibility = '';
         myMusic.style.visibility = '';
         myFit.style.visibility = '';
         // reset background
@@ -211,6 +208,7 @@ const jamal = myName.addEventListener('mouseover', function(event) {
         bgOne.style.backgroundImage = 'none';
     });
 });
+
 // DALLAS
 const city = myCity.addEventListener('mouseover', function(event) {
         // target nav
@@ -232,7 +230,7 @@ const city = myCity.addEventListener('mouseover', function(event) {
         rt6.style.visibility = 'hidden';
         rt7.style.visibility = 'hidden';
         rt8.style.visibility = 'hidden';
-        myName.style.display = 'none';
+        myName.style.visibility = 'hidden';
         myMusic.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
         // target background
@@ -260,7 +258,7 @@ const city = myCity.addEventListener('mouseover', function(event) {
         rt6.style.visibility = '';
         rt7.style.visibility = '';
         rt8.style.visibility = '';
-        myName.style.display = '';
+        myName.style.visibility = '';
         myMusic.style.visibility = '';
         myFit.style.visibility = '';
         // reset background
