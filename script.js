@@ -1,5 +1,4 @@
 
-
 // DATE & GREETINGS
 let today = new Date();
 let day = today.getDay();
@@ -152,6 +151,10 @@ const vThree = document.getElementById('threeVid');
 const vFour1 = document.getElementById('fourVid1');
 const vFour2 = document.getElementById('fourVid2');
 const vFour3 = document.getElementById('fourVid3');
+// scramble text under JAMAL
+    // el is boldLang
+const txt0 = document.getElementById('h2-1'); 
+
 
 
 
@@ -230,6 +233,8 @@ const city = myCity.addEventListener('mouseover', function(event) {
         rt6.style.visibility = 'hidden';
         rt7.style.visibility = 'hidden';
         rt8.style.visibility = 'hidden';
+        txt0.style.visibility= 'hidden';
+        el.style.visibility= 'hidden';
         myName.style.visibility = 'hidden';
         myMusic.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
@@ -258,6 +263,8 @@ const city = myCity.addEventListener('mouseover', function(event) {
         rt6.style.visibility = '';
         rt7.style.visibility = '';
         rt8.style.visibility = '';
+        txt0.style.visibility= '';
+        el.style.visibility= '';
         myName.style.visibility = '';
         myMusic.style.visibility = '';
         myFit.style.visibility = '';
@@ -288,6 +295,8 @@ const music = myMusic.addEventListener('mouseover', function(event) {
         rt6.style.visibility = 'hidden';
         rt7.style.visibility = 'hidden';
         rt8.style.visibility = 'hidden';
+        txt0.style.visibility= 'hidden';
+        el.style.visibility= 'hidden';
         myName.style.visibility = 'hidden';
         myCity.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
@@ -331,6 +340,8 @@ const music = myMusic.addEventListener('mouseover', function(event) {
         rt6.style.visibility = '';
         rt7.style.visibility = '';
         rt8.style.visibility = '';
+        txt0.style.visibility= '';
+        el.style.visibility= '';
         myName.style.visibility = '';
         myCity.style.visibility = '';
         myFit.style.visibility = '';
@@ -376,6 +387,8 @@ const fitness = myFit.addEventListener('mouseover', function(event) {
         rt6.style.visibility = 'hidden';
         rt7.style.visibility = 'hidden';
         rt8.style.visibility = 'hidden';
+        txt0.style.visibility= 'hidden';
+        el.style.visibility= 'hidden';
         myName.style.visibility = 'hidden';
         myCity.style.visibility = 'hidden';
         myMusic.style.visibility = 'hidden';
@@ -432,6 +445,8 @@ const fitness = myFit.addEventListener('mouseover', function(event) {
         rt6.style.visibility = '';
         rt7.style.visibility = '';
         rt8.style.visibility = '';
+        txt0.style.visibility= '';
+        el.style.visibility= '';
         myName.style.visibility = '';
         myCity.style.visibility = '';
         myMusic.style.visibility = '';
@@ -465,3 +480,85 @@ const fitness = myFit.addEventListener('mouseover', function(event) {
     });
 });
 
+
+
+
+
+
+
+
+
+// TEXT SCRAMBLE
+class TextScramble { 
+    constructor(el, chars) {
+    this.el = el
+    this.chars = chars || '!<>-_\\/[]{}—=+*^?#________'
+    this.update = this.update.bind(this)
+}
+
+setText(newText) {
+    const oldText = this.el.innerText
+    const length = Math.max(oldText.length, newText.length)
+    const promise = new Promise((resolve) => this.resolve = resolve)
+    this.queue = []
+    for (let i = 0; i < length; i++) {
+        const from = oldText[i] || ''
+        const to = newText[i] || ''
+        const start = Math.floor(Math.random() * 40)
+        const end = start + Math.floor(Math.random() * 40)
+        this.queue.push({ from, to, start, end })
+    }
+    cancelAnimationFrame(this.frameRequest)
+    this.frame = 0
+    this.update()
+    return promise
+}
+
+
+update() {
+    let output = ''
+    let complete = 0
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+        let { from, to, start, end, char } = this.queue[i]
+        if (this.frame >= end) {
+            complete++
+            output += to
+        } else if (this.frame >= start) {
+            if (!char || Math.random() < 0.28) {
+            char = this.randomChar()
+            this.queue[i].char = char
+        }
+        output += `<span class="dud">${char}</span>`
+    } else {
+      output += from
+    }
+}
+
+this.el.innerHTML = output
+if (complete === this.queue.length) {
+    this.resolve()
+} else {
+    this.frameRequest = requestAnimationFrame(this.update)
+    this.frame++
+    }
+}
+randomChar() {
+    return this.chars[Math.floor(Math.random() * this.chars.length)]
+    }
+}
+
+
+const phrases = ['JAVASCRIPT', 'NODEJS', 'REACT', 'PYTHON', 'C++']
+const CNs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-!@#$%^&*_-)(`~{}[]|/?><:;1234567890'
+const el = document.getElementById('boldLang')
+const fx = new TextScramble(el, CNs)
+
+let counter = 0
+const next = () => {
+    fx.setText(phrases[counter]).then(() => {
+    setTimeout(next, 1800)
+    })
+    counter = (counter + 1) % phrases.length
+}
+
+next()

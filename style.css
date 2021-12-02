@@ -301,6 +301,55 @@ h1 {
     justify-content: center;
     text-align: center;
 }
+
+.h2One {
+    min-width: 30vw;
+    height: 20vh;
+    margin: 25% 0 0 10%;
+    padding: 1% 3% 0 3%;
+    align-items: center;
+    font-size: 200%;
+    justify-content: center;
+    position: absolute;
+    font-family: 'HKGroteskLight','Baskervville','a_black_livesblacklives', sans-serif;
+    background-color: black;
+    color: white;
+}
+#bracketL {
+    font-family: 'HKGroteskLight','dorielregular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 280%;
+    width: 4vw;
+    height: 10.2vw;
+    margin: 25% 0 0 47%;
+    /* border: 4px solid red; */
+}
+#bracketR {
+    font-family: 'HKGroteskLight','dorielregular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 280%;
+    width: 4vw;
+    height: 10.2vw;
+    margin: -10.2% 0 0 90%;
+    /* border: 4px solid red; */
+}
+
+h3 {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 34vw;
+    height: 20.2vh;
+    margin: -10.2% 0 0 51.5%;
+    padding: 0 0 0 0;  
+    /* border: 4px solid purple; */
+}
+.spOne {
+    font-size: 175%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Cambay','Baskervville', 'a_black_livesblacklives';
+    /* border: 3px solid red; */
+}
 #pImgContainer {
     max-width: 100%;
     min-height: 100vh;
