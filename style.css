@@ -474,6 +474,8 @@ h3 {
 
 /* SCENE 1 */
 .scene1 {
+    align-items: center;
+    justify-content: center;
     margin: 60% 0 0 0;
     min-width: 100vw;
     height: 100vh;
@@ -482,5 +484,5 @@ h3 {
     position: sticky;
     max-width: 100%;
     height: auto;
-    background-color: bisque;
+    background-color: azure;
 }

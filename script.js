@@ -154,6 +154,9 @@ const vFour3 = document.getElementById('fourVid3');
 // scramble text under JAMAL
     // el is boldLang
 const txt0 = document.getElementById('h2-1'); 
+    // brackets
+const bL = document.getElementById('bracketL');
+const bR = document.getElementById('bracketR');
 
 
 
@@ -233,8 +236,10 @@ const city = myCity.addEventListener('mouseover', function(event) {
         rt6.style.visibility = 'hidden';
         rt7.style.visibility = 'hidden';
         rt8.style.visibility = 'hidden';
-        txt0.style.visibility= 'hidden';
-        el.style.visibility= 'hidden';
+        txt0.style.visibility = 'hidden';
+        el.style.visibility = 'hidden';
+        bL.style.visibility = 'hidden';
+        bR.style.visibility = 'hidden';
         myName.style.visibility = 'hidden';
         myMusic.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
@@ -265,6 +270,8 @@ const city = myCity.addEventListener('mouseover', function(event) {
         rt8.style.visibility = '';
         txt0.style.visibility= '';
         el.style.visibility= '';
+        bL.style.visibility = '';
+        bR.style.visibility = '';
         myName.style.visibility = '';
         myMusic.style.visibility = '';
         myFit.style.visibility = '';
@@ -297,6 +304,8 @@ const music = myMusic.addEventListener('mouseover', function(event) {
         rt8.style.visibility = 'hidden';
         txt0.style.visibility= 'hidden';
         el.style.visibility= 'hidden';
+        bL.style.visibility = 'hidden';
+        bR.style.visibility = 'hidden';
         myName.style.visibility = 'hidden';
         myCity.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
@@ -342,6 +351,8 @@ const music = myMusic.addEventListener('mouseover', function(event) {
         rt8.style.visibility = '';
         txt0.style.visibility= '';
         el.style.visibility= '';
+        bL.style.visibility = '';
+        bR.style.visibility = '';
         myName.style.visibility = '';
         myCity.style.visibility = '';
         myFit.style.visibility = '';
@@ -389,6 +400,8 @@ const fitness = myFit.addEventListener('mouseover', function(event) {
         rt8.style.visibility = 'hidden';
         txt0.style.visibility= 'hidden';
         el.style.visibility= 'hidden';
+        bL.style.visibility = 'hidden';
+        bR.style.visibility = 'hidden';
         myName.style.visibility = 'hidden';
         myCity.style.visibility = 'hidden';
         myMusic.style.visibility = 'hidden';
@@ -447,6 +460,8 @@ const fitness = myFit.addEventListener('mouseover', function(event) {
         rt8.style.visibility = '';
         txt0.style.visibility= '';
         el.style.visibility= '';
+        bL.style.visibility = '';
+        bR.style.visibility = '';
         myName.style.visibility = '';
         myCity.style.visibility = '';
         myMusic.style.visibility = '';
@@ -548,7 +563,7 @@ randomChar() {
 }
 
 
-const phrases = ['JAVASCRIPT', 'NODEJS', 'REACT', 'PYTHON', 'C++']
+const phrases = ['JAVASCRIPT', 'NODEJS', 'REACT', 'PYTHON', 'C++', 'HTML', 'CSS']
 const CNs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-!@#$%^&*_-)(`~{}[]|/?><:;1234567890'
 const el = document.getElementById('boldLang')
 const fx = new TextScramble(el, CNs)
