@@ -219,7 +219,7 @@ section {
         var(--initialBgColor) 50%,
         var(--slideBgColor) 50%,
         var(--slideBgColor) 100%);
-    background-size: 550%;
+    background-size: 15vw;
     transition: background-position .3s cubic-bezier(.47, .1, 1, .63), color .3s linear;
     transition-delay: 0.5s, 0.5s;
 } .navBar_Link:hover { 
