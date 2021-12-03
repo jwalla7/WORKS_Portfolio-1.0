@@ -219,7 +219,7 @@ section {
         var(--initialBgColor) 50%,
         var(--slideBgColor) 50%,
         var(--slideBgColor) 100%);
-    background-size: 550%;
+    background-size: 15vw;
     transition: background-position .3s cubic-bezier(.47, .1, 1, .63), color .3s linear;
     transition-delay: 0.5s, 0.5s;
 } .navBar_Link:hover { 
@@ -262,6 +262,7 @@ h1 {
     font-family: 'UnBatangRegular','negara_serifhairline_italic','UnGungseoRegular','GenomeThin', sans-serif;
     font-size: 4.5vw;
     font-weight: bold;
+    color: rgb(24, 24, 24);
 } 
 
 
@@ -271,7 +272,7 @@ h1 {
     font-weight: lighter;
     font-style: normal;
     letter-spacing: -5px;
-    color:rgb(56, 56, 60);
+    color: #979591;
 }
 
 
@@ -300,6 +301,57 @@ h1 {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.h2One {
+    min-width: 30vw;
+    height: 20vh;
+    margin: 25% 0 0 10%;
+    padding: 1% 3% 0 3%;
+    align-items: center;
+    font-size: 200%;
+    justify-content: center;
+    position: absolute;
+    font-family: 'HKGroteskLight','Baskervville','a_black_livesblacklives', sans-serif;
+    background-color: black;
+    color: white;
+}
+#bracketL {
+    display: flex;
+    font-family: 'HKGroteskLight','dorielregular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 280%;
+    width: 4vw;
+    height: 10.2vw;
+    margin: 25% 0 0 47%;
+    /* border: 4px solid red; */
+}
+#bracketR {
+    display: flex;
+    font-family: 'HKGroteskLight','dorielregular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 280%;
+    width: 4vw;
+    height: 10.2vw;
+    margin: -10.4% 0 0 92%;
+    /* border: 4px solid red; */
+}
+
+h3 {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 34vw;
+    height: 20.2vh;
+    margin: -10.2% 0 0 51.5%;
+    padding: 0 0 0 0;  
+    /* border: 4px solid purple; */
+}
+.spOne {
+    font-size: 175%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Cambay','Baskervville', 'a_black_livesblacklives';
+    /* border: 3px solid red; */
 }
 #pImgContainer {
     max-width: 100%;
@@ -425,6 +477,8 @@ h1 {
 
 /* SCENE 1 */
 .scene1 {
+    align-items: center;
+    justify-content: center;
     margin: 60% 0 0 0;
     min-width: 100vw;
     height: 100vh;
@@ -433,5 +487,5 @@ h1 {
     position: sticky;
     max-width: 100%;
     height: auto;
-    background-color: bisque;
+    background-color: azure;
 }
