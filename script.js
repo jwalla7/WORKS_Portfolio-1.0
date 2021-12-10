@@ -1,3 +1,11 @@
+// PAGE RELOAD TO TOP
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+} else {
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+}
 
 // DATE & GREETINGS
 let today = new Date();
@@ -21,7 +29,7 @@ const greeting = () => {
 }
 
 // JOYFUL WORDS
-const joyWords = ['beautiful', 'amazing', 'lovely', 'awesome', 'amazing', 'fantastic', 'incredible', 'marvelous', 'phenomenal', 'wondrous', 'tremendous','wonderful', 'magnificent', 'fine', 'cool', 'astonishing', 'new'];
+const joyWords = ['beautiful', 'amazing', 'lovely', 'awesome', 'amazing', 'fantastic', 'incredible', 'marvelous', 'wonderful', 'wondrous', 'fine', 'cool', 'new'];
 const ranJoy = joyWords[Math.floor(Math.random() * joyWords.length)];
 // first word
 document.getElementById('boldExpression').innerHTML = `${ranJoy}`;
@@ -35,28 +43,7 @@ function joyfulWords() {
             index %= joyWords.length;
         } 
     }, 4500);
-    // function stop(){
-    //     if (isInViewport === true) {
-    //     return console.log(`In the viewport`); 
-    //     } else {
-    //         return clearInterval(phrase);
-    //     }
-    // }
 }
-
-// let isInViewport = function() {
-//     let distance = document.getElementById('boldExpression').getBoundingClientRect();
-//     if (
-//         distance.top >= 0 &&
-//         distance.left >= 0 &&
-//         distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//         distance.right <= (window.innerWidth || document.documentElement.clientWidth)
-//     ) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
 
 joyfulWords();
 document.getElementById('boldDay').innerHTML = `${dayList[day]}`;
@@ -64,9 +51,25 @@ document.getElementById('boldGreeting').innerHTML = `${greeting()}`;
 
 
 
+// SCROLL NAVBAR TOP
+const navTop = document.getElementById('navContainerTop');
+
+window.addEventListener('scroll', (trig) => {
+    // start
+    navTop.style.animation = 'fade-in .3s ease-in-out';
+    navTop.style.background = 'white';
+    navTop.style.borderBottom = '4px solid black';
+    // reset
+    setTimeout(() => {
+        navTop.style.animation = '';
+        navTop.style.background = '';
+        navTop.style.borderBottom = '';
+    }, 1150)
+});
 
 
-// ON SCROLL NAV LINKS
+
+// ON MOUSE NAV LINKS
 const linkC = document.getElementById('linkContainer');
 const linkW = document.getElementById('linkWrapper');
 const logoC = document.getElementById('logoContainer');
@@ -169,7 +172,7 @@ const jamal = myName.addEventListener('mouseover', function(event) {
         document.body.style.cursor = 'crosshair';
         
         // target text
-        event.target.style.background = 'rgb(87, 106, 122, 1)';
+        event.target.style.background = 'rgba(255, 255, 255, 1)';
         rt1.style.visibility = 'hidden';
         rt2.style.visibility = 'hidden';
         rt3.style.visibility = 'hidden';
@@ -510,7 +513,6 @@ class TextScramble {
     this.chars = chars || '!<>-_\\/[]{}—=+*^?#________'
     this.update = this.update.bind(this)
 }
-
 setText(newText) {
     const oldText = this.el.innerText
     const length = Math.max(oldText.length, newText.length)
@@ -528,8 +530,6 @@ setText(newText) {
     this.update()
     return promise
 }
-
-
 update() {
     let output = ''
     let complete = 0
@@ -545,10 +545,9 @@ update() {
         }
         output += `<span class="dud">${char}</span>`
     } else {
-      output += from
+        output += from
     }
 }
-
 this.el.innerHTML = output
 if (complete === this.queue.length) {
     this.resolve()
@@ -561,13 +560,10 @@ randomChar() {
     return this.chars[Math.floor(Math.random() * this.chars.length)]
     }
 }
-
-
-const phrases = ['JAVASCRIPT', 'NODEJS', 'REACT', 'PYTHON', 'C++', 'HTML', 'CSS']
+const phrases = ['JAVASCRIPT', 'JAVA', 'NODEJS', 'REACT', 'PYTHON', 'C++', 'HTML', 'CSS']
 const CNs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-!@#$%^&*_-)(`~{}[]|/?><:;1234567890'
 const el = document.getElementById('boldLang')
 const fx = new TextScramble(el, CNs)
-
 let counter = 0
 const next = () => {
     fx.setText(phrases[counter]).then(() => {
@@ -575,5 +571,4 @@ const next = () => {
     })
     counter = (counter + 1) % phrases.length
 }
-
 next()
