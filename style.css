@@ -1,6 +1,6 @@
 /* FONTS */
 @font-face {
-    font-family: 'negara_serifhairline_italic','darker_grotesquelight','mordenregular', 'dorielregular', 'a_black_livesblacklives', 'porterbold_demo';
+    font-family: 'negara_serifhairline_italic','darker_grotesquelight','mordenregular', 'dorielregular', 'a_black_livesblacklives', 'porterbold_demo','rotanregular','londontworegular','lovtony_sansregular','masqueregular','porterbold_demo','quartzo_demobold', 'metropolisblack', 'metropolisbold','metropolisextra_bold','metropolismedium';
     
     src: 
     url('morden-webfont.woff2') format('woff2'), url('morden-webfont.woff') format('woff'),
@@ -8,7 +8,27 @@
     url('ablacklives-webfont.woff2') format('woff2'), url('ablacklives-webfont.woff') format('woff'),
     url('porter_bold-webfont.woff2') format('woff2'), url('porter_bold-webfont.woff') format('woff'),
     url('darkergrotesque-light-webfont.woff2') format('woff2'), url('darkergrotesque-light-webfont.woff') format('woff'),
-    url('negaraserif-hairlineitalic-webfont.woff2') format('woff2'), url('negaraserif-hairlineitalic-webfont.woff') format('woff');
+    url('negaraserif-hairlineitalic-webfont.woff2') format('woff2'), url('negaraserif-hairlineitalic-webfont.woff') format('woff'),
+    url('rotan-regular-webfont.woff2') format('woff2'),
+    url('rotan-regular-webfont.woff') format('woff')
+    url('londontwo-webfont.woff2') format('woff2'),
+    url('londontwo-webfont.woff') format('woff'),
+    url('lovtony-webfont.woff2') format('woff2'),
+    url('lovtony-webfont.woff') format('woff'),
+    url('masque__-webfont.woff2') format('woff2'),
+    url('masque__-webfont.woff') format('woff'),
+    url('porter_bold-webfont.woff2') format('woff2'),
+    url('porter_bold-webfont.woff') format('woff'),
+    url('quartzo__personal_use_only-webfont.woff2') format('woff2'),
+    url('quartzo__personal_use_only-webfont.woff') format('woff'),
+    url('metropolis-black-webfont.woff2') format('woff2'),
+    url('metropolis-black-webfont.woff') format('woff'),
+    url('metropolis-bold-webfont.woff2') format('woff2'),
+    url('metropolis-bold-webfont.woff') format('woff'),
+    url('metropolis-extrabold-webfont.woff2') format('woff2'),
+    url('metropolis-extrabold-webfont.woff') format('woff'),
+    url('metropolis-medium-webfont.woff2') format('woff2'),
+    url('metropolis-medium-webfont.woff') format('woff');
     
     font-weight: normal;
     font-style: normal;
@@ -85,6 +105,7 @@
 html, * {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
+    outline: 0 0 0 0;
     box-sizing: border-box;
 }    
 
@@ -117,8 +138,8 @@ section {
 
 .header-Container {
     /* Layout */
-    max-width: 100%;
-    min-height: 50vh;
+    min-width: 100vw;
+    height: auto;
     top: 0;
     left: 0;
     z-index: 7;
@@ -128,8 +149,20 @@ section {
     /* background-color: red; */
 }    
 
-/*  ------ NAV CONTAINER ------ */
-#navContainer {
+/*  ------ NAV CONTAINER TOP ------ */
+#navContainerTop {
+    /* Layout */
+    min-width: 100vw;
+    min-height: 13.7%;
+    /* Position */
+    position: fixed;
+    /* Background */
+    background-color: none;
+    /* Border */
+    /* border-bottom: 4px solid black; */
+}
+/*  ------ NAV CONTAINER LEFT ------ */
+#navContainerLeft {
     /* Layout */
     width: 10vw;
     height: 50vh;
@@ -140,26 +173,30 @@ section {
     background-color: none;
     /* Border */
     /* border: 5px solid violet; */
-}    
+}
 /*  ------ Nav Logo Container ------ */
 #logoContainer{
     /* Layout */
     min-width: 9.5vw;
-    min-height: 11vh;
+    height: 12.7vh;
     padding: -20%;
     /* Position */
     margin: 0 0 0 0;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     /* Background */
     background-color: none;
-    /* border: 5px solid orangered; */
+    /* border: 3px solid orangered; */
     /* Border */
     /* Font */
     color: white;
 }    
 #sig {
+    display: inline-flex;
     /* padding: -20% 0 1% 0; */
-    max-width: 80%;
+    max-width: 100%;
+    height: 12vh;
 }    
 
 /*  ------  Nav ------ */
@@ -183,7 +220,7 @@ section {
 /*  ------  Nav LinkWrapper ------ */
 #linkWrapper {
     min-width: 14.3vw;
-    height: 10vh;
+    height: auto;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -198,7 +235,8 @@ section {
 .navBar_Link {
     /* Layout */
     display: flex;
-    width: 3.6vw;
+    min-width: 3.6vw;
+
     /* Position */
     padding: 0 0 5% 5%;
     /* Background */
@@ -245,7 +283,7 @@ section {
 
 /* SCENE 0 */
 h1 {
-    min-width: 75vw;
+    min-width: 70vw;
     min-height: 50vh;
     align-items: center;
     justify-content: center;
@@ -253,32 +291,42 @@ h1 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    line-height: 2.8em;
+    line-height: 2.2em;
     /* border: 5px solid white; */
 }
 
 /* em */
 .boldText {
-    font-family: 'UnBatangRegular','negara_serifhairline_italic','UnGungseoRegular','GenomeThin', sans-serif;
-    font-size: 4.5vw;
-    font-weight: bold;
+    /* font-family: 'HKGroteskLight','UnBatangRegular','negara_serifhairline_italic','UnGungseoRegular','GenomeThin', sans-serif; */
+    font-family: 'metropolisblack', 'metropolisbold','metropolisextra_bold','metropolismedium','porterbold_demo','a_black_livesblacklives', sans-serif;
+    font-size: 5.65vw;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+
     color: rgb(24, 24, 24);
 } 
-
-
 .regText {
-    font-family: 'HKGroteskLight','IsabellaSansRegular','GowaRegular','AlexanderRegular','Unna','Jomolhari','Jacques Francois','Oxygen Mono','Oranienbaum','Cambay','Gilda Display','Baskervville','Suranna','Bodoni Moda','Noto Serif Display','Sawarabi Mincho','Old Standard TT','Prata','Amiri','Nanum Myeongjo','B612 Mono', sans-serif;
-    font-size: 4.5vw;
-    font-weight: lighter;
+    /* font-family: 'HKGroteskLight','IsabellaSansRegular','GowaRegular','AlexanderRegular','Unna','Jomolhari','Jacques Francois','Oxygen Mono','Oranienbaum','Cambay','Gilda Display','Baskervville','Suranna','Bodoni Moda','Noto Serif Display','Sawarabi Mincho','Old Standard TT','Prata','Amiri','Nanum Myeongjo','B4.512 Mono', sans-serif; */
+    font-family: 'metropolisbold','metropolisextra_bold','metropolismedium','porterbold_demo','a_black_livesblacklives', sans-serif;
+    font-size: 5.65vw;
+    font-weight: bolder;
     font-style: normal;
-    letter-spacing: -5px;
-    color: #979591;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+
+    color: #a7a7a7;
+}
+
+#boldExpression {
 }
 
 
 
 /* PAGES */
 .main {
+    min-width: 100vw;
     z-index: 6;
     top: 0;
     left: 0;
@@ -485,7 +533,7 @@ h3 {
 }
 .aboutMe {
     position: sticky;
-    max-width: 100%;
+    width: 100vw;
     height: auto;
     background-color: azure;
 }
