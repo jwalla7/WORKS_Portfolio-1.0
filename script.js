@@ -56,7 +56,7 @@ const navTop = document.getElementById('navContainerTop');
 
 window.addEventListener('scroll', (trig) => {
     // start
-    navTop.style.animation = 'fade-in .3s ease-in-out';
+    navTop.style.animation = 'fade-in 0s ease';
     navTop.style.background = 'white';
     navTop.style.borderBottom = '4px solid black';
     // reset
@@ -64,7 +64,7 @@ window.addEventListener('scroll', (trig) => {
         navTop.style.animation = '';
         navTop.style.background = '';
         navTop.style.borderBottom = '';
-    }, 1150)
+    }, 4000)
 });
 
 
@@ -249,7 +249,7 @@ const city = myCity.addEventListener('mouseover', function(event) {
         // target background
         bgMain.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         bgOne.style.backgroundColor = 'rgba(255, 255, 255, 0)';
-        bgOne.style.backgroundImage = 'none';
+        bgOne.style.backgroundImage = 'visible';
     // reset
     myCity.addEventListener('mouseout', function() {
         // reset nav
@@ -543,7 +543,7 @@ update() {
             char = this.randomChar()
             this.queue[i].char = char
         }
-        output += `<span class="dud">${char}</span>`
+        output += `<span class="textscramble">${char}</span>`
     } else {
         output += from
     }
@@ -561,7 +561,7 @@ randomChar() {
     }
 }
 const phrases = ['JAVASCRIPT', 'JAVA', 'NODEJS', 'REACT', 'PYTHON', 'C++', 'HTML', 'CSS']
-const CNs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-!@#$%^&*_-)(`~{}[]|/?><:;1234567890'
+const CNs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-!$%&#@'
 const el = document.getElementById('boldLang')
 const fx = new TextScramble(el, CNs)
 let counter = 0

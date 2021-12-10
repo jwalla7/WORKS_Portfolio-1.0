@@ -159,13 +159,12 @@ section {
     /* Background */
     background-color: none;
     /* Border */
-    /* border-bottom: 4px solid black; */
 }
 /*  ------ NAV CONTAINER LEFT ------ */
 #navContainerLeft {
     /* Layout */
     width: 10vw;
-    height: 50vh;
+    height: 55vh;
     /* Position */
     position: fixed;
     /* margin: 0 0 0 89.1vw; */
@@ -203,7 +202,7 @@ section {
 #linkContainer {
     /* Layout */
     min-width: 5vw;
-    height: 35.8vh;
+    height: 41.175vh;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
     /* Position */
@@ -224,7 +223,7 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 12.5vh 10vw 0 -2.8vw;
+    margin: 16.5vh 10vw 0 -2.8vw;
     display: flex;
     transform: rotate(-90deg);
     column-gap: 7%;
@@ -238,7 +237,7 @@ section {
     min-width: 3.6vw;
 
     /* Position */
-    padding: 0 0 5% 5%;
+    padding: 5% 11.5% 5% 6.5%;
     /* Background */
     /* border: 2px solid yellow; */
     /* Border */
@@ -263,7 +262,7 @@ section {
 } .navBar_Link:hover { 
     color: var(--slideTextColor);
     cursor: pointer;
-    background-position: -50% 100%;
+    background-position: -60% 100%;
 }   
 
 
@@ -316,10 +315,12 @@ h1 {
     text-transform: uppercase;
     letter-spacing: -3px;
 
-    color: #a7a7a7;
+    color: rgba(98, 101, 111, 0.748)
 }
 
-#boldExpression {
+#boldGreeting {
+    -webkit-text-stroke: 2.5px black;
+    color: white;
 }
 
 
@@ -363,6 +364,19 @@ h1 {
     font-family: 'HKGroteskLight','Baskervville','a_black_livesblacklives', sans-serif;
     background-color: black;
     color: white;
+}
+.textscramble {
+color:rgb(146, 146, 146);
+}
+#eOperator {
+    display: flex;
+    font-family: 'HKGroteskLight','dorielregular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 280%;
+    width: 4vw;
+    height: 10.2vw;
+    margin: 25% 0 0 47%;
+    letter-spacing: -0.5em;
+    /* border: 4px solid red; */
 }
 #bracketL {
     display: flex;
@@ -531,9 +545,21 @@ h3 {
     min-width: 100vw;
     height: 100vh;
 }
-.aboutMe {
+.contact {
     position: sticky;
     width: 100vw;
     height: auto;
-    background-color: azure;
+    background-color: rgb(229, 229, 229);
+}
+.projects {
+    position: sticky;
+    width: 100vw;
+    height: auto;
+    background-color: rgb(197, 197, 197);
+}
+.resume {
+    position: sticky;
+    width: 100vw;
+    height: auto;
+    background-color: rgb(146, 146, 146);
 }
