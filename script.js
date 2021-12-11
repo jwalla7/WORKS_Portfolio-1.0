@@ -142,6 +142,14 @@ let rt5 = document.getElementById('text5');
 let rt6 = document.getElementById('text6');
 let rt7 = document.getElementById('text7');
 let rt8 = document.getElementById('text8');
+// etc text
+let rtB = document.getElementById('regBold');
+let eOp = document.getElementById('eOperator');
+let vrb = document.getElementById('variable');
+let eCln = document.getElementById('eColon');
+let brL = document.getElementById('bracketL');
+let brR = document.getElementById('bracketR');
+let sCln = document.getElementById('semiColonR');
 // background
 const bgMain = document.getElementById('main');
 const bgOne = document.getElementById('one');
@@ -157,9 +165,10 @@ const vFour3 = document.getElementById('fourVid3');
 // scramble text under JAMAL
     // el is boldLang
 const txt0 = document.getElementById('h2-1'); 
-    // brackets
+    // brackets & scroll
 const bL = document.getElementById('bracketL');
 const bR = document.getElementById('bracketR');
+const srlA = document.getElementById('scrollHA');
 
 
 
@@ -181,9 +190,17 @@ const jamal = myName.addEventListener('mouseover', function(event) {
         rt6.style.visibility = 'hidden';
         rt7.style.visibility = 'hidden';
         rt8.style.visibility = 'hidden';
+        rtB.style.visibility = 'hidden';
+        eOp.style.visibility = 'visible';
+        vrb.style.visibility = 'visible';
+        brL.style.visibility = 'visible';
+        brR.style.visibility = 'visible';
+        sCln.style.visibility = 'visible';
+        eCln.style.visibility = 'visible';
         myCity.style.visibility = 'hidden';
         myMusic.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
+        srlA.style.visibility = 'hidden';
         // target background
         bgMain.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         bgOne.style.backgroundImage = '';
@@ -208,9 +225,11 @@ const jamal = myName.addEventListener('mouseover', function(event) {
         rt6.style.visibility = '';
         rt7.style.visibility = '';
         rt8.style.visibility = '';
+        rtB.style.visibility = '';
         myCity.style.visibility = '';
         myMusic.style.visibility = '';
         myFit.style.visibility = '';
+        srlA.style.visibility = '';
         // reset background
         bgMain.style.backgroundColor = '';
         bgOne.style.backgroundColor = '';
@@ -239,6 +258,13 @@ const city = myCity.addEventListener('mouseover', function(event) {
         rt6.style.visibility = 'hidden';
         rt7.style.visibility = 'hidden';
         rt8.style.visibility = 'hidden';
+        rtB.style.visibility = 'hidden';
+        eOp.style.visibility = 'hidden';
+        vrb.style.visibility = 'hidden';
+        brL.style.visibility = 'hidden';
+        brR.style.visibility = 'hidden';
+        sCln.style.visibility = 'hidden';
+        eCln.style.visibility = 'hidden';
         txt0.style.visibility = 'hidden';
         el.style.visibility = 'hidden';
         bL.style.visibility = 'hidden';
@@ -246,6 +272,7 @@ const city = myCity.addEventListener('mouseover', function(event) {
         myName.style.visibility = 'hidden';
         myMusic.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
+        srlA.style.visibility = 'hidden';
         // target background
         bgMain.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         bgOne.style.backgroundColor = 'rgba(255, 255, 255, 0)';
@@ -271,6 +298,13 @@ const city = myCity.addEventListener('mouseover', function(event) {
         rt6.style.visibility = '';
         rt7.style.visibility = '';
         rt8.style.visibility = '';
+        rtB.style.visibility = '';
+        eOp.style.visibility = '';
+        vrb.style.visibility = '';
+        brL.style.visibility = '';
+        brR.style.visibility = '';
+        sCln.style.visibility = '';
+        eCln.style.visibility = '';
         txt0.style.visibility= '';
         el.style.visibility= '';
         bL.style.visibility = '';
@@ -278,6 +312,7 @@ const city = myCity.addEventListener('mouseover', function(event) {
         myName.style.visibility = '';
         myMusic.style.visibility = '';
         myFit.style.visibility = '';
+        srlA.style.visibility = '';
         // reset background
         bgMain.style.backgroundColor = '';
         bgOne.style.backgroundColor = '';
@@ -305,6 +340,13 @@ const music = myMusic.addEventListener('mouseover', function(event) {
         rt6.style.visibility = 'hidden';
         rt7.style.visibility = 'hidden';
         rt8.style.visibility = 'hidden';
+        rtB.style.visibility = 'hidden';
+        eOp.style.visibility = 'hidden';
+        vrb.style.visibility = 'hidden';
+        brL.style.visibility = 'hidden';
+        brR.style.visibility = 'hidden';
+        sCln.style.visibility = 'hidden';
+        eCln.style.visibility = 'hidden';
         txt0.style.visibility= 'hidden';
         el.style.visibility= 'hidden';
         bL.style.visibility = 'hidden';
@@ -312,6 +354,7 @@ const music = myMusic.addEventListener('mouseover', function(event) {
         myName.style.visibility = 'hidden';
         myCity.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
+        srlA.style.visibility = 'hidden';
         // target background
         bgMain.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         bgOne.style.backgroundColor = 'rgba(255, 255, 255, 0)';
@@ -352,6 +395,13 @@ const music = myMusic.addEventListener('mouseover', function(event) {
         rt6.style.visibility = '';
         rt7.style.visibility = '';
         rt8.style.visibility = '';
+        rtB.style.visibility = 'hidden';
+        eOp.style.visibility = 'hidden';
+        vrb.style.visibility = 'hidden';
+        brL.style.visibility = 'hidden';
+        brR.style.visibility = 'hidden';
+        sCln.style.visibility = 'hidden';
+        eCln.style.visibility = 'hidden';
         txt0.style.visibility= '';
         el.style.visibility= '';
         bL.style.visibility = '';
@@ -359,6 +409,7 @@ const music = myMusic.addEventListener('mouseover', function(event) {
         myName.style.visibility = '';
         myCity.style.visibility = '';
         myFit.style.visibility = '';
+        srlA.style.visibility = '';
         // reset background
         bgMain.style.backgroundColor = '';
         bgOne.style.backgroundColor = '';
@@ -401,6 +452,13 @@ const fitness = myFit.addEventListener('mouseover', function(event) {
         rt6.style.visibility = 'hidden';
         rt7.style.visibility = 'hidden';
         rt8.style.visibility = 'hidden';
+        rtB.style.visibility = 'hidden';
+        eOp.style.visibility = 'hidden';
+        vrb.style.visibility = 'hidden';
+        brL.style.visibility = 'hidden';
+        brR.style.visibility = 'hidden';
+        sCln.style.visibility = 'hidden';
+        eCln.style.visibility = 'hidden';
         txt0.style.visibility= 'hidden';
         el.style.visibility= 'hidden';
         bL.style.visibility = 'hidden';
@@ -408,6 +466,7 @@ const fitness = myFit.addEventListener('mouseover', function(event) {
         myName.style.visibility = 'hidden';
         myCity.style.visibility = 'hidden';
         myMusic.style.visibility = 'hidden';
+        srlA.style.visibility = 'hidden';
         // target background
         bgMain.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         bgOne.style.backgroundColor = 'rgba(255, 255, 255, 0)';
@@ -468,6 +527,7 @@ const fitness = myFit.addEventListener('mouseover', function(event) {
         myName.style.visibility = '';
         myCity.style.visibility = '';
         myMusic.style.visibility = '';
+        srlA.style.visibility = '';
         // reset background
         bgMain.style.backgroundColor = '';
         bgOne.style.backgroundColor = '';
@@ -497,7 +557,6 @@ const fitness = myFit.addEventListener('mouseover', function(event) {
             vFour3.offsetWidth;
     });
 });
-
 
 
 
@@ -560,7 +619,7 @@ randomChar() {
     return this.chars[Math.floor(Math.random() * this.chars.length)]
     }
 }
-const phrases = ['JAVASCRIPT', 'JAVA', 'NODEJS', 'REACT', 'PYTHON', 'C++', 'HTML', 'CSS']
+const phrases = ['"JAVASCRIPT"', '"JAVA"', '"NODEJS"', '"REACT"', '"PYTHON"', '"C++"', '"HTML"', '"CSS"']
 const CNs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-!$%&#@'
 const el = document.getElementById('boldLang')
 const fx = new TextScramble(el, CNs)
