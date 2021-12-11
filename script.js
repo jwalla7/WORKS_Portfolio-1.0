@@ -28,8 +28,10 @@ const greeting = () => {
     }
 }
 
+
+
 // JOYFUL WORDS
-const joyWords = ['beautiful', 'amazing', 'lovely', 'awesome', 'amazing', 'fantastic', 'incredible', 'marvelous', 'wonderful', 'wondrous', 'fine', 'cool', 'new'];
+const joyWords = ['amazing', 'lovely', 'awesome', 'fine', 'cool', 'new', 'dazzling', 'grand', 'graceful', 'superb', 'unique', 'charming'];
 const ranJoy = joyWords[Math.floor(Math.random() * joyWords.length)];
 // first word
 document.getElementById('boldExpression').innerHTML = `${ranJoy}`;
