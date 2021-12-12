@@ -300,10 +300,7 @@ h1 {
 .boldText {
     /* font-family: 'HKGroteskLight','UnBatangRegular','negara_serifhairline_italic','UnGungseoRegular','GenomeThin', sans-serif; */
     font-family: 'metropolisbold','metropolisextra_bold','metropolismedium','porterbold_demo','a_black_livesblacklives', sans-serif;
-
     font-size: 5.625vw;
-
-
     font-weight: bolder;
     font-style: normal;
     text-transform: uppercase;
@@ -314,10 +311,7 @@ h1 {
 #regBold {
     /* font-family: 'HKGroteskLight','UnBatangRegular','negara_serifhairline_italic','UnGungseoRegular','GenomeThin', sans-serif; */
     font-family: 'metropolisbold','metropolisextra_bold','metropolismedium','porterbold_demo','a_black_livesblacklives', sans-serif;
-
     font-size: 5.625vw;
-
-
     font-weight: bolder;
     font-style: normal;
     text-transform: uppercase;
@@ -328,11 +322,11 @@ h1 {
 .regText {
     /* font-family: 'HKGroteskLight','IsabellaSansRegular','GowaRegular','AlexanderRegular','Unna','Jomolhari','Jacques Francois','Oxygen Mono','Oranienbaum','Cambay','Gilda Display','Baskervville','Suranna','Bodoni Moda','Noto Serif Display','Sawarabi Mincho','Old Standard TT','Prata','Amiri','Nanum Myeongjo','B4.512 Mono', sans-serif; */
     font-family: 'metropolisbold','metropolismedium','porterbold_demo','a_black_livesblacklives', sans-serif;
-
     font-size: 5.625vw;
     font-weight: lighter;
-
-
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: -3px;
 
     color: #333333ac;
 }
