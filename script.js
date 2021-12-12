@@ -164,6 +164,15 @@ const vThree = document.getElementById('threeVid');
 const vFour1 = document.getElementById('fourVid1');
 const vFour2 = document.getElementById('fourVid2');
 const vFour3 = document.getElementById('fourVid3');
+// two slides video & images
+const vTwoCow = document.getElementById('twoVidCow');
+const vTwoCar = document.getElementById('twoVidCar');
+const imgTrain = document.getElementById('twoImgTrain');
+const imgBridge = document.getElementById('twoImgBridge');
+const imgPCity = document.getElementById('twoImgPCity');
+const imgCity = document.getElementById('twoImgCity');
+
+
 // scramble text under JAMAL
     // el is boldLang
 const txt0 = document.getElementById('h2-1'); 
@@ -239,8 +248,36 @@ const jamal = myName.addEventListener('mouseover', function(event) {
     });
 });
 
+
+// DALLAS SLIDESHOW
+    // run
+    let slideIndex = 0;
+    let dallasSlide;
+    const dallasTXR = () => {
+        let y = document.getElementsByClassName('dallasSL');
+        for (let i = 0; i < y.length; i++) {
+            y[i].style.display ='none';
+            console.log('slide:' + y[i]);
+        }
+        slideIndex++;
+        console.log(slideIndex);
+        if (slideIndex > y.length) {
+            slideIndex = 1;
+        }
+        y[slideIndex - 1].style.display = 'block';
+        dallasSlide = setTimeout(dallasTXR, 6000);
+    };
+    // stop
+    const dallasTXS = () => {
+        clearTimeout(dallasSlide);
+    }
+
+
 // DALLAS
 const city = myCity.addEventListener('mouseover', function(event) {
+
+    // run func
+    dallasTXR();
         // target nav
         nv.style.visibility = 'hidden';
         // target cursor
@@ -275,12 +312,20 @@ const city = myCity.addEventListener('mouseover', function(event) {
         myMusic.style.visibility = 'hidden';
         myFit.style.visibility = 'hidden';
         srlA.style.visibility = 'hidden';
+        // target slideshow
+        vTwoCow.style.visibility = 'visible';
+        vTwoCar.style.visibility = 'visible';
+        imgTrain.style.visibility = 'visible';
+        imgBridge.style.visibility = 'visible';
+        imgPCity.style.visibility = 'visible';
+        imgCity.style.visibility = 'visible';  
         // target background
         bgMain.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         bgOne.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         bgOne.style.backgroundImage = 'visible';
     // reset
     myCity.addEventListener('mouseout', function() {
+        dallasTXS();
         // reset nav
         nv.style.visibility = '';
         // reset cursor
@@ -315,6 +360,13 @@ const city = myCity.addEventListener('mouseover', function(event) {
         myMusic.style.visibility = '';
         myFit.style.visibility = '';
         srlA.style.visibility = '';
+        // hide slides
+        vTwoCow.style.visibility = '';
+        vTwoCar.style.visibility = '';
+        imgTrain.style.visibility = '';
+        imgBridge.style.visibility = '';
+        imgPCity.style.visibility = '';
+        imgCity.style.visibility = '';  
         // reset background
         bgMain.style.backgroundColor = '';
         bgOne.style.backgroundColor = '';
@@ -397,13 +449,13 @@ const music = myMusic.addEventListener('mouseover', function(event) {
         rt6.style.visibility = '';
         rt7.style.visibility = '';
         rt8.style.visibility = '';
-        rtB.style.visibility = 'hidden';
-        eOp.style.visibility = 'hidden';
-        vrb.style.visibility = 'hidden';
-        brL.style.visibility = 'hidden';
-        brR.style.visibility = 'hidden';
-        sCln.style.visibility = 'hidden';
-        eCln.style.visibility = 'hidden';
+        rtB.style.visibility = '';
+        eOp.style.visibility = '';
+        vrb.style.visibility = '';
+        brL.style.visibility = '';
+        brR.style.visibility = '';
+        sCln.style.visibility = '';
+        eCln.style.visibility = '';
         txt0.style.visibility= '';
         el.style.visibility= '';
         bL.style.visibility = '';
@@ -522,6 +574,13 @@ const fitness = myFit.addEventListener('mouseover', function(event) {
         rt6.style.visibility = '';
         rt7.style.visibility = '';
         rt8.style.visibility = '';
+        rtB.style.visibility = '';
+        eOp.style.visibility = '';
+        vrb.style.visibility = '';
+        brL.style.visibility = '';
+        brR.style.visibility = '';
+        sCln.style.visibility = '';
+        eCln.style.visibility = '';
         txt0.style.visibility= '';
         el.style.visibility= '';
         bL.style.visibility = '';
