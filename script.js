@@ -692,3 +692,15 @@ const next = () => {
     counter = (counter + 1) % phrases.length
 }
 next()
+
+
+// PAGE RULER 
+window.onresize = screen;
+window.onload = screen;
+
+function screen () {
+    let myWidth = window.innerWidth;
+    let myHeight = window.innerHeight;
+    document.getElementById('page-ruler').innerHTML = `PAGE RULLER = Width: ${myWidth}  |  Height: ${myHeight}px`;
+};
+

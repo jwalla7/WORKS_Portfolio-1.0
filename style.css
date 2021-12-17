@@ -113,7 +113,8 @@ html, * {
 
 body {
     min-width: 100vw;
-    height: auto
+    height: 100vh;
+    background-color: white;
 }    
 
 
@@ -374,6 +375,7 @@ h1 {
 /* PAGES */
 .main {
     min-width: 100vw;
+    height: auto;
     z-index: 6;
     top: 0;
     left: 0;
@@ -715,3 +717,50 @@ h3 {
     height: auto;
     background-color: rgb(146, 146, 146);
 }
+.under-construction-page {
+    display: none;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.under-construction-page-text {
+    display: none;
+    z-index: 99;
+    width: 70%;
+    height: 60vh;
+    padding: 5% 5% 5% 5%;
+    position: absolute;
+    transform: translateY(20%) translateX(20%);
+    top: 0;
+    left: 0;
+    text-align: start;
+    border: 1px solid black;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'metropolisbold',sans-serif;
+    font-size: 2.5em;
+
+}
+@media only screen and (min-width: 0px) and (max-width: 1204px) {
+    header {
+        display: none;
+    }
+    .scene0 {
+        display: none;
+    }
+    .scene1 {
+        display: none;
+    }
+    .under-construction-page {
+        display: inline-block;
+    }
+    .under-construction-page-text {
+        display: inline-block;
+    }
+};
