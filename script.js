@@ -38,9 +38,9 @@ document.getElementById('boldExpression').innerHTML = `${ranJoy}`;
 
 
 let index = 0;
-function joyfulWords() { 
-    phrase = setInterval(function(){
-        if (index <= joyWords.length) { 
+function joyfulWords() {
+    setInterval(function(){
+        if (index <= joyWords.length) {
             document.getElementById('boldExpression').innerHTML = joyWords[index++];
             index %= joyWords.length;
         } 
@@ -80,6 +80,8 @@ const mySig = document.getElementById('sig');
 
 // LOGO
 logoC.addEventListener('mouseover', (evt) => {
+    // target cursor
+    document.body.style.cursor = 'crosshair';
     // target logo
     mySig.style.background = 'white';
     mySig.style.filter = 'invert(100%)';
@@ -101,11 +103,15 @@ logoC.addEventListener('mouseover', (evt) => {
     mySig.style.visibility = 'visible';
     // reset logo
     linkW.addEventListener('mouseleave', () => {
+        // reset cursor
+        document.body.style.cursor = '';
         linkC.style.visibility = 'hidden';
         linkC.style.animation = 'paused';
         linkW.style.visibility = 'hidden';
     });
     logoC.addEventListener('mouseleave', () => {
+        // reset cursor
+        document.body.style.cursor = '';
         linkC.style.visibility = '';
         mySig.style.background = '';
         mySig.style.filter = '';
@@ -186,6 +192,7 @@ const srlA = document.getElementById('scrollHA');
 
 // JAMAL
 const jamal = myName.addEventListener('mouseover', function(event) {
+        dallasTXS();
         // target nav
         nv.style.visibility = 'hidden';
         // target cursor
@@ -217,6 +224,8 @@ const jamal = myName.addEventListener('mouseover', function(event) {
         bgOne.style.backgroundImage = '';
     // reset
     myName.addEventListener('mouseout', function() {
+        // reset cursor
+        document.body.style.cursor = '';
         // reset nav
         nv.style.visibility = 'visible';
         // reset logo & links
@@ -265,7 +274,7 @@ const jamal = myName.addEventListener('mouseover', function(event) {
             slideIndex = 1;
         }
         y[slideIndex - 1].style.display = 'block';
-        dallasSlide = setTimeout(dallasTXR, 6000);
+        dallasSlide = setTimeout(dallasTXR, 3500);
     };
     // stop
     const dallasTXS = () => {
@@ -376,6 +385,7 @@ const city = myCity.addEventListener('mouseover', function(event) {
 // MUSIC
 const music = myMusic.addEventListener('mouseover', function(event) {
         // target nav
+        dallasTXR();
         nv.style.visibility = 'hidden';
         // target cursor
         document.body.style.cursor = 'crosshair';
@@ -487,6 +497,7 @@ const music = myMusic.addEventListener('mouseover', function(event) {
 
 const fitness = myFit.addEventListener('mouseover', function(event) {
         // target nav
+        dallasTXR();
         nv.style.visibility = 'hidden';
         // target cursor
         document.body.style.cursor = 'crosshair';
@@ -701,6 +712,6 @@ window.onload = screen;
 function screen () {
     let myWidth = window.innerWidth;
     let myHeight = window.innerHeight;
-    document.getElementById('page-ruler').innerHTML = `PAGE RULLER = Width: ${myWidth}  |  Height: ${myHeight}px`;
+    document.getElementById('page-ruler').innerHTML = `PAGE RULER = Width: ${myWidth}  |  Height: ${myHeight}px`;
 };
 
