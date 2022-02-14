@@ -691,7 +691,7 @@ randomChar() {
     return this.chars[Math.floor(Math.random() * this.chars.length)]
     }
 }
-const phrases = ['"JAVASCRIPT"', '"JAVA"', '"NODEJS"', '"REACT"', '"PYTHON"', '"C++"', '"HTML"', '"CSS"']
+const phrases = ['"JAVASCRIPT"', '"JAVA"', '"NODEJS"', '"REACT"', '"PYTHON"', '"HTML"', '"CSS"']
 const CNs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-!$%&#@'
 const el = document.getElementById('boldLang')
 const fx = new TextScramble(el, CNs)
